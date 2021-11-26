@@ -1,0 +1,205 @@
+/* Change the clip path div to an actual image, vector so it can be styled more easily */
+
+:root {
+    --dark-grey: #495057;
+    --light-grey: #DADADA;
+    --white: #F8F9FA;
+    --black: #000000;
+    --main-color: #533ede;
+    --background: #2a199d;
+    --text-color: #3D28CF;
+
+    --main-font: 'Montserrat', sans-serif;
+
+    --small-margin: .5rem;
+
+    /* version2 */
+    --main-green: #52b69a;
+    --secondary-green: rgb(52, 160, 164);
+    --tertiary-green: #76c893;
+
+    /* version3 */
+    --main-red:#ef233c;
+    --secondary-red: rgb(193, 18, 31);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62,5%;
+    font-family: var(--main-font);
+}
+
+.modal-container {
+    background-color: rgba(73, 80, 87,0.3);
+    backdrop-filter: blur(2px);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: scroll;
+    display: none;
+    /* transition: all ease .5s; */
+}
+
+
+.form-container {
+    background-color: var(--white);
+    width: 30%;
+    margin: 5% auto;
+    padding: 5rem;
+    position: relative;
+    z-index: 1001;
+}
+
+.clip {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42,25,157,.6);
+    clip-path: ellipse(75% 40% at 50% 25%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form-icon {
+    display: inline-block;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0 4rem 0;
+}
+
+
+.lock-icon {
+    width: 4rem;
+    height: 4rem;
+    fill: var(--black);
+}
+
+.logo-text {
+    color: var(--black);
+    margin-top: var(--small-margin);
+}
+
+.main-message {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: var(--small-margin);
+    color: var(--black);
+}
+
+.secondary-message {
+    margin-bottom: 2rem;
+}
+
+.secondary-number {
+    font-weight: bold;
+    margin-right: var(--small-margin);
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 1rem 2rem;
+    outline: none;
+    border: 1px solid var(--light-grey);
+    font-family: var(--main-font);
+    z-index: 1003;
+}
+
+input[type="email"] {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+input[type="password"] {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+input::placeholder {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    color: var(--main-color);
+}
+
+.green::placeholder {
+    color: var(--main-green);
+}
+
+.red::placeholder {
+    color: var(--main-red);
+}
+
+.sign-up-btn {
+    display: block;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 2rem 0 1rem 0;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: var(--white);
+    background-color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.log-in-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.log-in-btn:hover {
+    text-decoration: underline;
+}
+
+.version-btn {
+    cursor: pointer;
+    display: block;
+    margin: 3rem 0 0 2rem;
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: all .3s;
+    box-shadow: 4px 8px 8px 0 rgba(73, 80, 87,0.8);
+}
+
+/* not sure if I want hover */
+/* .version-btn:hover {
+    transform: translateY(-2px);
+} */
+
+.version-btn:active {
+    transform: translateY(5px);
+    box-shadow: 1px 2px 4px 0 rgba(73, 80, 87,0.8);
+}
+#version1 {
+    background-image: linear-gradient(to right, #533ede 0%, #2a199d 100%);
+}
+
+#version2 {
+    background-image: linear-gradient(to right, var(--main-green) 0%, var(--secondary-green) 100%);
+}
+
+#version3{
+    background-image: linear-gradient(to right, var(--main-red) 0%, var(--secondary-red) 100%);
+}

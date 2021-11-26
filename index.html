@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign up form</title>
+</head>
+<body>
+    <button class="version-btn" id="version1">Version 1</button>
+    <button class="version-btn" id="version2">Version 2</button>
+    <button class="version-btn" id="version3">Version 3</button>
+    <div class="modal-container">
+        <div class="form-container">
+            <div class="clip"></div>
+            <div class="form-info">
+                <div class="form-icon">
+                    <svg class="lock-icon">
+                        <use xlink:href="#lnr-lock"></use>
+                    </svg>
+                    <p class="logo-text">lock.data</p>
+                </div>      
+                <h2 class="main-message">Protect your data with us.</h2>
+                <p class="secondary-message">
+                    <span class="secondary-number">230.100.04</span>
+                    People trust us
+                </p>
+            </div>
+       
+                <div class="form-control">
+                    <form class="sign-up-form">
+                        <input type="email" placeholder="Email address" required>
+                        <input type="password" placeholder="Password" required>
+    
+                        <button class="sign-up-btn" type="submit" onclick="return false">Sign Up</button>
+                    </form>
+                    <p class="log-in-text">
+                        Already Signed Up?
+                        <a href="#" class="log-in-btn">Log in</a>
+                    </p>
+                </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
